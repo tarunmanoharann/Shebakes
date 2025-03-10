@@ -1,25 +1,28 @@
-@import "tailwindcss";
+/* src/global.css */
+/* ... previous styles ... */
 
+body {
+  margin: 0;
+  padding-top: 140px; /* Height of PromoBar (60px) + Navbar (80px) */
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(
+    135deg, 
+    #FFF0F5 0%, 
+    #FFE4E1 25%, 
+    #FFF0F5 50%, 
+    #FFE4E1 75%, 
+    #FFF0F5 100%
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
+}
 
-@theme {
-  keyframes {
-    flutter: {
-      "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
-      "25%": { transform: "translateY(-5px) rotate(5deg)" },
-      "75%": { transform: "translateY(5px) rotate(-5deg)" }
-    },
-    blink: {
-      "0%": { opacity: "1" },
-      "50%": { opacity: "0" },
-      "100%": { opacity: "1" }
-    }
-  },
-  animation: {
-    flutter: "flutter 2s ease-in-out infinite",
-    blink: "blink 1.5s linear infinite"
+@media (max-width: 768px) {
+  body {
+    padding-top: 200px; /* Adjusted for two-line PromoBar + Navbar */
   }
 }
 
-
-
-
+* {
+  box-sizing: border-box;
+}
